@@ -1,0 +1,54 @@
+{
+	"noob": {
+		"logError": {
+			"message": "[NOOB]: Error writing to log file."
+		},
+		"jsonParseError": {
+			"code": 500,
+			"message": "[NOOB]: Error parsing JSON object received from target country: "
+		},
+		"timeoutError": {
+			"code": 408,
+			"message": "[NOOB]: Request to target server timed out."
+		},
+		"requestCompileError": {
+			"code": 500,
+			"message": "[NOOB]: Error while attempting to compile https.request to target country: "
+		},
+		"sendRequestError": {
+			"message": "[NOOB]: Error in sendRequest() top level catch block: "
+		},
+		"sendRequestTLDR": {
+			"code": 500,
+			"message": "[NOOB]: Random error while trying to forward your request."
+		},
+		"noobTest": {
+			"code": 200,
+			"message": "[NOOB]: Who are you calling NOOB?"
+		},
+		"expectedJSONError": {
+			"code": 400,
+			"message": "[NOOB]: Bad Request: Expected ` 'Content-Type':'application/json' `."
+		},
+		"awaitError": {
+			"message": "[NOOB]: Error during await sendRequest()."
+		},
+		"somethingHappened": {
+			"code": 500,
+			"message": "[NOOB]: Internal server error. Something went wrong while trying to forward your request."
+		},
+		"invalidCertIssuer": {
+			"message": "[NOOB]: Invalid certificate. Issuer info:\n"
+		},
+		"unauthorized": {
+			"code": 403,
+			"message": "[NOOB]: Unauthorized. Invalid certificate."
+		}
+	},
+	"wysd": {
+		"blame": " Blame skelm.",
+		"seeLogs": " Check the public log.",
+		"rtfm": " Check the docs.",
+		"sanityCheck": " Check your HTTP headers."
+	}
+}
