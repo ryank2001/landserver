@@ -23,7 +23,7 @@ const opts = {
 	]
 };
 
-
+port = 8334
 
 routingtable ={
     ODUO : "145.24.222.225",
@@ -60,7 +60,7 @@ async function sendRequest( sendObj, apiMethod, _callback) {
     const apiMethodStr = '/api/'.concat(apiMethod);
     const https_options = {
 	host:	 	"145.24.222.82",
-	port: 		8443,
+	port: 		port,
 	path: 		apiMethodStr,
 	method:		"POST",
     headers:        { 'Content-Type': 'application/json' },
@@ -117,7 +117,7 @@ async function sendRequestHTTP(dstIP, sendObj, apiMethod, httpMethod, _callback)
     console.log(dstIP)
     const https_options = {
         host:	 	dstIP,
-        port: 		80,
+        port: 		81,
         path: 		apiMethodStr,
         method:		httpMethod,
         headers:        { 'Content-Type': 'application/json' },
@@ -231,6 +231,6 @@ app.post('/api/:requestType', async (req, res) => {
         res.status(r.unauthorized.code).send(r.unauthorized.message + wysd.seeLogs);
     }
 });
-port = 8334
-http.createServer(app).listen(80);
-https.createServer(opts, app).listen(8443);
+
+http.createServer(app).listen(81);
+https.createServer(opts, app).listen(port);
